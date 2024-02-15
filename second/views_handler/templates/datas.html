@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <h2>Hello Table</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        {% for key in data.0.keys %}
+          <th>{{ key }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data %}
+        <tr>
+          {% for value in item.values %}
+            <td>{{ value }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</body>
+</html>
